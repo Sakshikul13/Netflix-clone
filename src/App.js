@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+// JUST CREATE A FUNCTION HERE 
+import './App.css'
+import Nav from './components/nav/Nav'
+import Header from './components/header/Header';
+import Content from './components/content/Content';
+/*const Home=()=>{
+  
+  
+  return (<div>Home
+  <h4></h4>
+  <h5>age={props.age}</h5>
+  </div>
+  );
+  
+};*/
 
-function App() {
+
+const App =() =>{
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Nav/>
+      <Header/>
+      <Content/>
     </div>
   );
-}
-
-export default App;
+};      //this function contains what is visible on the screen jsx. this function is called a component 
+export default App; //always export
