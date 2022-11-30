@@ -3,6 +3,12 @@ import './App.css'
 import Nav from './components/nav/Nav'
 import Header from './components/header/Header';
 import Content from './components/content/Content';
+import axios from 'axios';
+
+axios.defaults.baseURL='https://api.themoviedb.org/3'
+axios.defaults.params={
+  api_key:'52af2bc35f4b3c90ee5f16c03a00609b',
+};
 /*const Home=()=>{
   
   

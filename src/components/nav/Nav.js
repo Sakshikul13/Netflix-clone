@@ -1,9 +1,24 @@
 import './Nav.css'
 import {useState , useEffect} from 'react';
 const Nav=()=>{
-    
+    const [show,setShow]=useState(false); //purpose of setshow is just to update the state variable.
+    const scrollHandler = ()=>{
+      if(window.scrollY>10){
+        setShow(true);
+      }
+      else{
+        setShow(false);
+      }
+
+    };
+    useEffect(()=>{
+       window.addEventListener("scroll",scrollHandler);
+       return ()=>{
+        window.removeEventListener('scroll',scrollHandler);
+       };
+    },[]);
     return (
-    <nav>
+    <nav style={{backgroundColor: show ? 'rgb(20,20,20)' : 'transparent',}}>
         
         <section>
          <div className="nav_left" >
